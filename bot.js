@@ -105,41 +105,29 @@ async function sendSTKPush(amount, phoneNumber, externalRef, customerName) {
 
 /**
  * =============================
- * PACKAGES: Data & SMS
+ * PACKAGES: Data Bundles 
  * =============================
  */
 const dataPackages = {
   hourly: [
     { id: 1, name: '1GB', price: 19, validity: '1 hour' },
-    { id: 2, name: '1.5GB', price: 49, validity: '3 hours' }
+    { id: 2, name: '1.5GB', price: 50, validity: '3 hours' }
   ],
   daily: [
     { id: 1, name: '1.25GB', price: 55, validity: 'Till midnight' },
-    { id: 2, name: '1GB', price: 99, validity: '24 hours' },
-    { id: 3, name: '250MB', price: 20, validity: '24 hours' }
+    { id: 2, name: '1GB', price: 95, validity: '24 hours' },
+    { id: 3, name: '250MB', price: 18, validity: '24 hours' }
   ],
   weekly: [
     { id: 1, name: '6GB', price: 700, validity: '7 days' },
     { id: 2, name: '2.5GB', price: 300, validity: '7 days' },
-    { id: 3, name: '350MB', price: 50, validity: '7 days' }
+    { id: 3, name: '350MB', price: 47, validity: '7 days' }
   ],
   monthly: [
     { id: 1, name: '1.2GB', price: 250, validity: '30 days' },
     { id: 2, name: '500MB', price: 100, validity: '30 days' }
   ]
 };
-const smsPackages = {
-  daily: [
-    { id: 1, name: '200 SMS', price: 10, validity: 'Daily' }
-  ],
-  weekly: [
-    { id: 1, name: '1000 SMS', price: 29, validity: 'Weekly' }
-  ],
-  monthly: [
-    { id: 1, name: '2000 SMS', price: 99, validity: 'Monthly' }
-  ]
-};
-
 /**
  * =============================
  * WHATSAPP CLIENT SETUP
@@ -173,7 +161,7 @@ client.on('ready', () => {
   console.log('✅ Bot is online!');
   client.sendMessage(
     `${ADMIN_NUMBER}@c.us`,
-    `🎉 Hello Admin! FY'S ULTRA BOT is now live.
+    `🎉 Hello Admin! Bingwa bot is now live.
 Type "menu" for user flow or "Admin CMD" for admin commands.`
   );
 });
